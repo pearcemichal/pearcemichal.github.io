@@ -60,7 +60,7 @@
 
         <div class="form-product-item">
 
-                <img id="product-image" src="icon.png" onError="bad_image()" alt="product" class="form-product-image-with-options" style="height:auto;vertical-align:middle" width="50">
+                <img id="product-image" src="icon.png" onError="bad_image(this)" alt="product" class="form-product-image-with-options" style="height:auto;vertical-align:middle" width="50">
                 <div data-wrapper-react="true" class="form-product-item-detail">
                   <input class="form-checkbox " id="input_95_1000" name="q95_myProducts[][id]" value="1000" type="checkbox">
                   <label for="input_95_1000" class="form-product-container">
@@ -105,8 +105,8 @@
             //always subscribe to ready event and implement widget related code
             //inside callback function , it is the best practice while developing widgets
 
-            function bad_image () {
-                  this.src = 'icon.png';
+            function bad_image (image) {
+                  image.src = 'icon.png';
             };
 
             JFCustomWidget.subscribe("ready", function(){
