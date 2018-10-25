@@ -108,7 +108,14 @@
             JFCustomWidget.subscribe("ready", function(){
 
                 var image = JFCustomWidget.getWidgetSetting('product-image');
-                document.getElementById('product-image').src = image;
+                var image_element document.getElementById('product-image');
+                if (image) {
+                    image_element.src = image;
+                }
+
+                else {
+                    image_element.src = "icon.png";
+                }
 
                 var desc = JFCustomWidget.getWidgetSetting('product-description');
                 document.getElementById('product-description').innerHTML = desc;
