@@ -104,6 +104,22 @@
             //always subscribe to ready event and implement widget related code
             //inside callback function , it is the best practice while developing widgets
 
+            function bad_image (image) {
+                  image.src = 'icon.png';
+            };
+
+            function increment_product() {
+                var count = $("#product-quantity");
+
+                if (count.value == 0) {
+                    count.value += 1;
+                }
+
+                else {
+                    count.value = 0;
+                }
+            }
+
             JFCustomWidget.subscribe("ready", function(){
 
                 var image = JFCustomWidget.getWidgetSetting('product-image');
@@ -114,22 +130,6 @@
 
                 var price = JFCustomWidget.getWidgetSetting('product-price');
                 $('#product-price').innerHTML = price;
-
-                function bad_image (image) {
-                      image.src = 'icon.png';
-                };
-
-                function increment_product() {
-                    var count = $("#product-quantity");
-
-                    if (count.value == 0) {
-                        count.value += 1;
-                    }
-
-                    else {
-                        count.value = 0;
-                    }
-                }
 
 
                 //subscribe to form submit event
