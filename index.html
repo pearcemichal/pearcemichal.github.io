@@ -111,9 +111,8 @@
                 var image_element = document.getElementById('product-image');
                 image_element.src = image;
 
-                image_element.onerror = function () {
-                      alert('error loading ' + this.src);
-                      this.src = 'error.png'; // place your error.png image instead
+                image_element.onError = function () {
+                      this.src = 'icon.png';
                 };
 
                 var desc = JFCustomWidget.getWidgetSetting('product-description');
