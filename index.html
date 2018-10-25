@@ -62,8 +62,7 @@
 
                 <img id="product-image" src="icon.png" onError="bad_image(this)" alt="product" class="form-product-image-with-options" style="height:auto;vertical-align:middle" width="50">
                 <div data-wrapper-react="true" class="form-product-item-detail">
-                  <input class="form-checkbox " id="input_95_1000" name="q95_myProducts[][id]" value="1000" type="checkbox">
-                  <label for="input_95_1000" class="form-product-container">
+                  <input id="product-selected" class="form-checkbox" onclick="increment_product()" name="product" value="1000" type="checkbox">
                     <span data-wrapper-react="true">
                       <span id="product-description" class="form-product-name">
                         Description
@@ -85,7 +84,7 @@
                   <br>
                   <span class="form-sub-label-container" style="vertical-align:top">
                     <label class="form-sub-label" for="input_95_quantity_1000_0" style="min-height:13px"> Quantity </label>
-                    <input size="3" class="form-textbox form-product-quantity" name="q95_myProducts[special_1000][item_0]" id="input_95_quantity_1000_0" value="0" type="number">
+                    <input id="product-quantity" size="3" class="form-textbox form-product-quantity"  value="0" type="number">
                   </span>
 
                   <span class="form-sub-label-container" style="vertical-align:top">
@@ -105,20 +104,33 @@
             //always subscribe to ready event and implement widget related code
             //inside callback function , it is the best practice while developing widgets
 
-            function bad_image (image) {
-                  image.src = 'icon.png';
-            };
-
             JFCustomWidget.subscribe("ready", function(){
 
                 var image = JFCustomWidget.getWidgetSetting('product-image');
-                document.getElementById('product-image').src = image;
+                $('#product-image').src = image;
 
                 var desc = JFCustomWidget.getWidgetSetting('product-description');
-                document.getElementById('product-description').innerHTML = desc;
+                $('#product-description').innerHTML = desc;
 
                 var price = JFCustomWidget.getWidgetSetting('product-price');
-                document.getElementById('product-price').innerHTML = price;
+                $('#product-price').innerHTML = price;
+
+                function bad_image (image) {
+                      image.src = 'icon.png';
+                };
+
+                function increment_product() {
+                    var count = $("#product-quantity");
+
+                    if (count.value == 0) {
+                        count.value += 1;
+                    }
+
+                    else {
+                        count.value = 0;
+                    }
+                }
+
 
                 //subscribe to form submit event
                 JFCustomWidget.subscribe("submit", function(){
