@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <script src="//js.jotform.com/JotFormCustomWidget.min.js"></script>
+        <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+
+        <style type="text/css">
+            .checklist img
+            {
+                height: 100px;
+                width: 100px;
+            }
+            .checklist label
+            {
+                padding-right: .75rem;
+            }
+
+            .checklist li.hover, .checklist li:hover {
+                background: none;
+            }
+
+            .form-product-item img {
+                width : 100px;
+                float: left;
+                margin-right: 10px;
+            }
+
+            .form-product-item > img + .form-product-item-detail {
+                width : calc(100% - 120px);
+            }
+
+            .form-product-item {
+                float: left;
+                width : calc(100% - 20px);
+                padding : 10px;
+                border : 1px solid #cccccc;
+                border-radius : 0;
+                box-shadow : 0 2px 6px rgba(0,0,0,.2);
+                height: 100px;
+                width: 600px;
+            }
+
+            .form-product-quantity {
+                width: 50px;
+                margin-right: 10px;
+            }
+        </style>
+    </head>
+    <body>
+
+        <div class="loading-layer" style="display: none;">
+            <div class="spinner"></div>
+        </div>
+        <div class="error-layer" style="display: none;">
+            <div class="table">
+                <div class="table-cell" id="status">We cannot complete your request</div>
+            </div>
+        </div>
+
+        <div class="form-product-item">
+
+                <img src="https://files.jotform.com/jufs/dawn9791/form_files/BG-8213%20Black.490.jpg" alt="product" class="form-product-image-with-options" style="height:auto;vertical-align:middle" width="50">
+                <div data-wrapper-react="true" class="form-product-item-detail">
+                  <input class="form-checkbox " id="input_95_1000" name="q95_myProducts[][id]" value="1000" type="checkbox">
+                  <label for="input_95_1000" class="form-product-container">
+                    <span data-wrapper-react="true">
+                      <span class="form-product-name" id="product-name-input_95_1000">
+                        Long Sleeve Twill BG - 8213
+                      </span>
+
+                      <span class="form-product-details">
+                        <b>
+                          <span data-wrapper-react="true">
+                            - $
+                            <span id="product_price">
+                             13.00
+                            </span>
+                          </span>
+                        </b>
+                      </span>
+                    </span>
+                  </label>
+                  <br>
+                  <br>
+                  <span class="form-sub-label-container" style="vertical-align:top">
+                    <label class="form-sub-label" for="input_95_quantity_1000_0" style="min-height:13px"> Quantity </label>
+                    <input size="3" class="form-textbox form-product-quantity" name="q95_myProducts[special_1000][item_0]" id="input_95_quantity_1000_0" value="0" type="number">
+                  </span>
+
+                  <span class="form-sub-label-container" style="vertical-align:top">
+
+                    <label class="form-sub-label" for="input_95_custom_1000_1" style="min-height:13px"> Color </label>
+                    <select class="form-dropdown" name="[style]" id="style">
+                      <option value="1">Option 1</option>
+                      <option value="2">Option 2</option>
+                      <option value="3">Option 3</option>
+                    </select>
+                  </span>
+                </div>
+
+        </div>
+
+        <script type="text/javascript">
+            //always subscribe to ready event and implement widget related code
+            //inside callback function , it is the best practice while developing widgets
+
+            JFCustomWidget.subscribe("ready", function(){
+                var label = JFCustomWidget.getWidgetSetting('QuestionLabel');
+                document.getElementById('labelText').innerHTML = label;
+                //subscribe to form submit event
+                JFCustomWidget.subscribe("submit", function(){
+                    var msg = {
+                        //you should valid attribute to data for JotForm
+                        //to be able to use youw widget as required
+                        valid: true,
+                        value: document.getElementById('userInput').value
+                    }
+                    // send value to JotForm
+                    JFCustomWidget.sendSubmit(msg);
+                });
+            });
+        </script>
+    </body>
+</html>
