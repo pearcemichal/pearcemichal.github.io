@@ -123,13 +123,13 @@
             JFCustomWidget.subscribe("ready", function(){
 
                 var image = JFCustomWidget.getWidgetSetting('product-image');
-                $('#product-image').src = image;
+                $("#product-image").src = image;
 
                 var desc = JFCustomWidget.getWidgetSetting('product-description');
-                $('#product-description').innerHTML = desc;
+                $("#product-description").innerHTML = desc;
 
                 var price = JFCustomWidget.getWidgetSetting('product-price');
-                $('#product-price').innerHTML = price;
+                $("#product-price").innerHTML = price;
 
 
                 //subscribe to form submit event
