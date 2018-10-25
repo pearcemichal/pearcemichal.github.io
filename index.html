@@ -64,12 +64,12 @@
 
         <div class="form-product-item">
 
-                <img src="icon.png" alt="product" class="form-product-image-with-options" style="height:auto;vertical-align:middle" width="50">
+                <img id="product-image" src="icon.png" alt="product" class="form-product-image-with-options" style="height:auto;vertical-align:middle" width="50">
                 <div data-wrapper-react="true" class="form-product-item-detail">
                   <input class="form-checkbox " id="input_95_1000" name="q95_myProducts[][id]" value="1000" type="checkbox">
                   <label for="input_95_1000" class="form-product-container">
                     <span data-wrapper-react="true">
-                      <span class="form-product-name" id="product-name-input_95_1000">
+                      <span id="product-description" class="form-product-name">
                         Description
                       </span>
 
@@ -110,15 +110,24 @@
             //inside callback function , it is the best practice while developing widgets
 
             JFCustomWidget.subscribe("ready", function(){
-                var label = JFCustomWidget.getWidgetSetting('QuestionLabel');
-                document.getElementById('labelText').innerHTML = label;
+
+                var image = JFCustomWidget.getWidgetSetting('product-image');
+                document.getElementById('product-image').source = image;
+
+                var desc = JFCustomWidget.getWidgetSetting('product-description');
+                document.getElementById('product-description').innerHTML = desc;
+
+                var price = JFCustomWidget.getWidgetSetting('product_price');
+                document.getElementById('product_price').innerHTML = price;
+
                 //subscribe to form submit event
                 JFCustomWidget.subscribe("submit", function(){
                     var msg = {
                         //you should valid attribute to data for JotForm
                         //to be able to use youw widget as required
                         valid: true,
-                        value: document.getElementById('userInput').value
+                        Name: desc,
+                        price: price,
                     }
                     // send value to JotForm
                     JFCustomWidget.sendSubmit(msg);
