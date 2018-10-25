@@ -108,14 +108,13 @@
             JFCustomWidget.subscribe("ready", function(){
 
                 var image = JFCustomWidget.getWidgetSetting('product-image');
-                var image_element document.getElementById('product-image');
-                if (image != "") {
-                    image_element.src = image;
-                }
+                var image_element = document.getElementById('product-image');
+                image_element.src = image;
 
-                else {
-                    image_element.src = "icon.png";
-                }
+                image_element.onerror = function () {
+                      alert('error loading ' + this.src);
+                      this.src = 'error.png'; // place your error.png image instead
+                };
 
                 var desc = JFCustomWidget.getWidgetSetting('product-description');
                 document.getElementById('product-description').innerHTML = desc;
