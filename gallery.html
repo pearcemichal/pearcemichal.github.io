@@ -1,0 +1,122 @@
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <title>Gallery</title>
+
+  <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+
+  <link href="css/style.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body>
+  <!-- header -->
+  <div class="header">
+
+    <div class="company-info">
+      <img class="company-icon" src="images/icon.png">
+      <img class="company-name" src="images/company-name.png">
+    </div>
+    <!-- end header -->
+  </div>
+
+  <div class="navbar">
+    <div class="nav-info">
+      <a href="index.html">Games</a>
+      <a class="current-page" href="gallery.html">Gallery</a>
+      <a href="about.html">About</a>
+      <a href="https://store.steampowered.com/news/?appids=651940" target="_blank">Blog</a>
+      <!--<a href="contact.html">Contact</a>-->
+    </div>
+  </div>
+
+  <!-- content -->
+  <div class="content-container">
+
+    <div class="content">
+
+      <h1>Debris Field</h1>
+      <hr>
+      <!-- gallery -->
+          <div id="debris-field-gallery" class="gallery">
+
+              <div class="gallery-item">
+                <img class="gallery-image" src="https://i.imgur.com/RiFBC6f.png" alt="Debris Field 1">
+                <div class="gallery-description"><p>Explore a randomly generated space arena<p></div>
+              </div>
+
+              <div class="gallery-item">
+                <img class="gallery-image" src="https://i.imgur.com/KK1PQGF.png" alt="Debris Field 2">
+              </div>
+
+              <div class="gallery-item">
+                <img class="gallery-image" src="https://i.imgur.com/ypMdksS.png" alt="Debris Field 3">
+              </div>
+
+              <div class="gallery-item">
+                <img class="gallery-image" src="https://i.imgur.com/orbhXmU.png" alt="Debris Field 4">
+              </div>
+
+              <div class="gallery-item">
+                <img class="gallery-image" src="https://i.imgur.com/YO2xIMr.png" alt="Debris Field 5">
+                <div class="gallery-description"><p>Travel through several unique levels with their own secrets to discover<p></div>
+              </div>
+
+              <div class="gallery-item">
+                <img class="gallery-image" src="https://i.imgur.com/frQW4ZK.png" alt="Debris Field 6">
+              </div>
+
+              <div class="gallery-item">
+                <img class="gallery-image" src="https://i.imgur.com/et33jya.png" alt="Debris Field 7">
+              </div>
+
+              <div class="gallery-item">
+                <img class="gallery-image" src="https://i.imgur.com/fg6IZ4A.png" alt="Debris Field 8">
+              </div>
+
+              <div class="gallery-item">
+                <img class="gallery-image" src="https://i.imgur.com/Y85CXsT.png" alt="Debris Field 9">
+              </div>
+
+              <div class="gallery-item">
+                <img class="gallery-image" src="https://i.imgur.com/zt94Vdl.png" alt="Debris Field 10">
+              </div>
+
+              <div class="gallery-item">
+                <img class="gallery-image" src="https://i.imgur.com/uAs3uKL.png" alt="Debris Field 11">
+              </div>
+
+              <div class="gallery-item">
+                <img class="gallery-image" src="https://i.imgur.com/WMIEddZ.png" alt="Debris Field 12">
+                <div class="gallery-description"><p>Overcome against all odds<p></div>
+              </div>
+
+              <div class="gallery-item">
+                <img class="gallery-image" src="https://i.imgur.com/V969g9e.png" alt="Debris Field 13">            
+              </div>
+          </div>
+
+      <!-- end content -->
+    </div>
+
+    <!-- end content container -->
+  </div>
+
+<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="slick/slick.js"></script>
+<!--<script type="text/javascript" src="js/gallery.js"></script>-->
+
+<script>
+    $(document).ready(function(){
+
+        $('.gallery').slick({  dots: true,
+          infinite: true,
+          speed: 300,
+          slidesToShow: 1});
+        });
+
+</script>
+
+</body>
+</html>
