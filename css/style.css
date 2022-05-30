@@ -1,0 +1,351 @@
+/* ~~
+
+color guide:
+
+background: #453923
+header: #e8d79b
+content: #c8b779
+
+text1: #472609
+text2: #a55915
+highlight: #f9b171
+
+~~ */
+
+a {
+  color: #e8d79b;
+  text-decoration: none;
+}
+
+.nav-info a {
+  font-size:16pt;
+  margin-right: 25px;
+}
+
+a:hover {
+  color: #a55915;
+}
+
+h1 {
+  color: #472609;
+  margin-bottom: 0;
+}
+
+h2 {
+  color: #a55915
+}
+
+hr {
+  border-style: solid;
+  color: #453923;
+
+}
+
+body {
+	font: 100%/1.4 Verdana, Arial, Helvetica, sans-serif;
+	background-color: #453923;
+	color: #472609;
+  width:100%;
+  margin: 0;
+  padding: 0;
+  //overflow: hidden;
+}
+
+footer {
+    padding: 1px 50px;
+}
+
+footer p {
+    color: #a5965f;
+    font-size: 12px;
+}
+
+.header-centered {
+    text-align: center;
+}
+
+.header-dark {
+    color: #201a10 !important;
+}
+
+.header {
+
+  margin-top: 30px;
+  width: 100%;
+  height: 120px;
+  background-color: #e8d79b;
+  box-shadow: 0px 5px 10px #000;
+}
+
+.company-info {
+    margin: auto;
+    width: 900px;
+    height: 100%;
+
+}
+
+.company-icon {
+  float: left;
+  position: absolute;
+  top:2px;
+  height:220px;
+}
+
+.company-name {
+  float:right;
+  margin-top: 8px;
+  height: 100px;
+}
+
+.navbar {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  height: 30px;
+  width: 100%;
+}
+
+.nav-info {
+  margin: auto;
+  max-width: 510px;
+}
+
+.current-page {
+  color: #ad9e66;
+}
+
+.content-container {
+  padding: 20px 50px;
+  background-color: #ad9e66;
+}
+
+.content {
+  max-width: 900px;
+  margin: auto;
+
+}
+
+.profile-image {
+    height: 170px;
+    float: left;
+    margin-right: 20px;
+    margin-top: 20px;
+    box-shadow: -10px -10px 0 #e8d79b;
+}
+
+.sitewrap {
+    width: 100%;
+    height: 500px;
+    padding: 0;
+    overflow: hidden;
+    box-shadow: 0px 5px 10px #000;
+}
+
+.siteview {
+    width: 1817px;
+    height: 1080px;
+
+    -ms-transform: scale(0.50);
+-moz-transform: scale(0.50);
+-o-transform: scale(0.4750);
+-webkit-transform: scale(0.50);
+transform: scale(0.50);
+
+-ms-transform-origin: 0 0;
+-moz-transform-origin: 0 0;
+-o-transform-origin: 0 0;
+-webkit-transform-origin: 0 0;
+transform-origin: 0 0;
+}
+
+.sitestatic {
+    display: none;
+}
+
+.gallery {
+    margin-bottom: 60px;
+}
+
+.gallery-item {
+    max-height: 505px;
+}
+
+.gallery-image {
+    height: 100%;
+    width: auto;
+    margin: auto;
+}
+
+.gallery-description {
+    position: absolute;
+    bottom: 0;
+    width: inherit;
+    background: rgba(173,158,102, 0.3);
+    color: #e8d79b;
+}
+
+.gallery-description p {
+    padding: 0 20px;
+    //text-shadow:2px 2px 2px #2f2617, -2px -2px 2px #2f2617;
+
+}
+
+.slick-slide {
+    background-color: black;
+}
+
+.slick-next {
+    right: -40px;
+}
+
+.slick-prev {
+    left: -40px;
+}
+
+.slick-prev, .slick-next {
+    width: 30px;
+    height: 30px;
+}
+
+.slick-prev::before, .slick-next::before {
+    font-size: 30px;
+    color: #472609;
+}
+
+.slick-dots li button::before {
+    color: #47260c;
+}
+
+.slick-dots li.slick-active button::before {
+    color: #47260c;
+}
+
+@media only screen and (max-width: 1000px) {
+
+    .sitestatic {
+        display: block;
+        width: 100%;
+        box-shadow: 0px 5px 10px #000;
+    }
+
+    .sitewrap {
+        display: none;
+    }
+
+    .header {
+        margin-top: 10px;
+        height: 90px;
+    }
+
+    .company-info {
+        width: 600px;
+    }
+
+    .company-name {
+        height: 70px;
+    }
+
+    .company-icon {
+        height: 120px;
+    }
+
+    .nav-info {
+        padding-left: 120px;
+    }
+}
+
+@media only screen and (max-width: 630px) {
+    h1, h2, h3 {
+        margin-top: 0px;
+        text-align: center;
+    }
+
+    .header {
+        margin-top: 5px;
+        height: 75px;
+    }
+
+    .company-info {
+        max-width: 440px;
+    }
+
+    .company-name {
+        height: 50px;
+    }
+
+    .company-icon {
+        height: 100px;
+    }
+
+    .navbar {
+        width: 100%;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        white-space: nowrap;
+    }
+
+    .nav-info {
+        height: 30px;
+        max-width: 2000px;
+        width: auto;
+        display: inline-block;
+        padding-left: 20px;
+    }
+
+    .content-container {
+        padding: 20px 20px;
+    }
+
+    footer {
+        padding: 0;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 430px) {
+
+    body {
+        width: 100%;
+        overflow:hidden;
+    }
+
+    .header {
+        margin-top: 5px;
+        height: 65px;
+    }
+
+    .company-info {
+        margin: 0 5px;
+        width: 100%;
+    }
+    .company-name {
+        float: left;
+        height: 47px;
+    }
+
+    .company-icon {
+        display: none;
+    }
+
+    .content-container {
+        padding: 10px 10px;
+    }
+
+    .profile-image {
+        height: 100px;
+    }
+}
+
+@media only screen and (max-width: 330px) {
+
+    .company-name {
+        float: left;
+        height: 40px;
+    }
+
+    .profile-image {
+        height: auto;
+        width: 100%;
+        box-shadow: none;
+        margin-bottom: 10px;
+    }
+}

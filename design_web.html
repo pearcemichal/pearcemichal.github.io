@@ -1,0 +1,87 @@
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <title>Web Design</title>
+
+
+  <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+
+  <link href="style.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body>
+  <!-- header -->
+  <div class="header">
+
+    <div class="company-info">
+      <img class="company-icon" src="images/icon.png">
+      <img class="company-name" src="images/company-name.png">
+    </div>
+    <!-- end header -->
+  </div>
+
+  <div class="navbar">
+  <div class="nav-info">
+      <a class="current-page" href="index.html">Bio</a>
+      <a href="design_web.html">Web Design</a>
+      <a href="design_games.html">Game Design</a>
+  </div>
+  </div>
+
+  <!-- content -->
+  <div class="content-container">
+
+    <div class="content">
+
+        <div>
+            <h1>Green Mountain Horse and Tack</h1>
+            <hr>
+
+            <p><a href="http://greenmountainhorse.com/" target="_blank"><h3>Website</h3></a>
+                <p>
+                    This site was build using the BigCommerce Stencil theming system as a base. I heavily modified the original design into something with a unique
+                    look and functionality that was more in line with the feel of the local buisiness it represented.
+                </p>
+
+                <p>
+                    Standout features of the site include a slide-out tray for the cart and quick search, as well as a custom shop-by price slider widget on
+                    product pages.
+                </p>
+
+                <h3 class="header-centered">Before</h3>
+                <div class="sitewrap">
+                 <iframe src="https://cornerstone-warm-demo.mybigcommerce.com" class="siteview" frameborder="0"></iframe>
+                </div>
+                <img class="sitestatic" src="images/web/cornerstone.png">
+
+                <p>&nbsp;</p>
+                <h3 class="header-centered">After</h3>
+                <div class="sitewrap">
+                <iframe src="http://greenmountainhorse.com/" class="siteview" frameborder="0"></iframe>
+            </div>
+                <img class="sitestatic"src="images/web/greenmountain.png">
+
+            </div>
+
+            <p>&nbsp;</p>
+
+      <!-- end content -->
+    </div>
+
+    <!-- end content container -->
+  </div>
+</body>
+<footer>
+        <div class="content">
+            <p>&copy<span id="year"></span> Pearce Michal, Binary Nomad LLC</p>
+        </div>
+
+        <script>
+            var span = document.getElementById('year');
+            var txt = document.createTextNode(new Date().getFullYear())
+            span.appendChild(txt);
+        </script>
+</footer>
+</html>
