@@ -13,44 +13,44 @@ highlight: #f9b171
 ~~ */
 
 a {
-  color: #e8d79b;
-  text-decoration: none;
+    color: #e8d79b;
+    text-decoration: none;
 }
 
 .nav-info a {
-  font-size:16pt;
-  margin-right: 25px;
+    font-size: 16pt;
+    margin-right: 25px;
 }
 
 a:hover {
-  color: #a55915;
+    color: #a55915;
 }
 
 h1 {
-  color: #472609;
-  margin-bottom: 0;
+    color: #472609;
+    margin-bottom: 0;
 }
 
 h2 {
-  color: #a55915
+    color: #a55915
 }
 
 hr {
-  border-style: solid;
-  color: #453923;
+    border-style: solid;
+    color: #453923;
 
 }
 
 body {
-	font: 100%/1.4 Verdana, Arial, Helvetica, sans-serif;
+    font: 100%/1.4 Verdana, Arial, Helvetica, sans-serif;
 
-	color: #472609;
-    width:100%;
+    color: #472609;
+    width: 100%;
     margin: 0;
     padding: 0;
 
     background: #453923;
-    background: linear-gradient(-30deg, rgb(57, 30, 7) 0%, rgba(133,78,30,1) 100%); 
+    background: linear-gradient(-30deg, rgb(57, 30, 7) 0%, rgba(133, 78, 30, 1) 100%);
 
 }
 
@@ -73,11 +73,11 @@ footer p {
 
 .header {
 
-  margin-top: 30px;
-  width: 100%;
-  height: 120px;
-  background-color: #e8d79b;
-  box-shadow: 0px 5px 10px #000;
+    margin-top: 30px;
+    width: 100%;
+    height: 120px;
+    background-color: #e8d79b;
+    box-shadow: 0px 5px 10px #000;
 }
 
 .company-info {
@@ -88,43 +88,46 @@ footer p {
 }
 
 .company-icon {
-  float: left;
-  position: absolute;
-  top:2px;
-  height:220px;
+    float: left;
+    position: absolute;
+    top: 2px;
+    height: 220px;
 }
 
 .company-name {
-  float:right;
-  margin-top: 8px;
-  height: 100px;
+    float: right;
+    margin-top: 8px;
+    height: 100px;
 }
 
 .navbar {
-  padding-top: 15px;
-  padding-bottom: 15px;
-  height: 30px;
-  width: 100%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    height: 30px;
+    width: 100%;
 }
 
 .nav-info {
-  margin: auto;
-  max-width: 510px;
+    margin: auto;
+    max-width: 510px;
 }
 
 .current-page {
-  color: #ad9e66;
+    color: #ad9e66;
 }
 
 .content-container {
-  padding: 20px 50px;
-  background-color: #ad9e66;
+    width: 100%;
+    padding: 10px;
+
 }
 
 .content {
-  max-width: 900px;
-  margin: auto;
-
+    background-color: #ad9e66;
+    padding: 10px 50px;
+    max-width: 900px;
+    margin: auto;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.3);
 }
 
 .profile-image {
@@ -148,16 +151,16 @@ footer p {
     height: 1080px;
 
     -ms-transform: scale(0.50);
--moz-transform: scale(0.50);
--o-transform: scale(0.4750);
--webkit-transform: scale(0.50);
-transform: scale(0.50);
+    -moz-transform: scale(0.50);
+    -o-transform: scale(0.4750);
+    -webkit-transform: scale(0.50);
+    transform: scale(0.50);
 
--ms-transform-origin: 0 0;
--moz-transform-origin: 0 0;
--o-transform-origin: 0 0;
--webkit-transform-origin: 0 0;
-transform-origin: 0 0;
+    -ms-transform-origin: 0 0;
+    -moz-transform-origin: 0 0;
+    -o-transform-origin: 0 0;
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
 }
 
 .sitestatic {
@@ -182,13 +185,13 @@ transform-origin: 0 0;
     position: absolute;
     bottom: 0;
     width: inherit;
-    background: rgba(173,158,102, 0.3);
+    background: rgba(173, 158, 102, 0.3);
     color: #e8d79b;
 }
 
 .gallery-description p {
     padding: 0 20px;
-    text-shadow:2px 2px 2px #2f2617, -2px -2px 2px #2f2617;
+    text-shadow: 2px 2px 2px #2f2617, -2px -2px 2px #2f2617;
 
 }
 
@@ -204,12 +207,14 @@ transform-origin: 0 0;
     left: -40px;
 }
 
-.slick-prev, .slick-next {
+.slick-prev,
+.slick-next {
     width: 30px;
     height: 30px;
 }
 
-.slick-prev::before, .slick-next::before {
+.slick-prev::before,
+.slick-next::before {
     font-size: 30px;
     color: #472609;
 }
@@ -267,7 +272,10 @@ footer {
 }
 
 @media only screen and (max-width: 630px) {
-    h1, h2, h3 {
+
+    h1,
+    h2,
+    h3 {
         margin-top: 0px;
         text-align: center;
     }
@@ -318,7 +326,7 @@ footer {
 
     body {
         width: 100%;
-        overflow:hidden;
+        overflow: hidden;
     }
 
     .header {
@@ -330,6 +338,7 @@ footer {
         margin: 0 5px;
         width: 100%;
     }
+
     .company-name {
         float: left;
         height: 47px;
