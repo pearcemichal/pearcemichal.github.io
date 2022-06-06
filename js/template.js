@@ -18,9 +18,16 @@ window.addEventListener('DOMContentLoaded', (event) => {
         console.warn(error);
   });
 
-  var fileName = location.href.split("/").slice(-1); 
+  var fileName = new URI(url).filename();
   console.log(fileName);
   var link = Document.getElementById(fileName);
   link.classList.add("current-page");
 
 });
+
+function fileName(url) {
+  if (url === null || typeof url === 'undefined')
+     return ''
+  let file = new URI(url).filename() // File name with file extension
+  return file.substring(0, file.lastIndexOf('.')) // Remove the extension
+}
