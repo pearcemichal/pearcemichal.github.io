@@ -18,4 +18,9 @@ window.addEventListener('DOMContentLoaded', (event) => {
         console.warn(error);
   });
 
+  var fileName = location.href.split("/").slice(-1); 
+  console.log(fileName);
+  var link = Document.getElementById(fileName);
+  link.classList.add("current-page");
+
 });
