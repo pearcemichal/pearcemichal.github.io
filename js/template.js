@@ -18,16 +18,16 @@ window.addEventListener('DOMContentLoaded', (event) => {
         console.warn(error);
   });
 
-  var fileName = new URI(url).filename();
+  // get current file name
+  var url = window.location.pathname;
+  var filename = url.substring(url.lastIndexOf('/')+1);
+
+  // Remove the extension
+  filename = file.substring(0, file.lastIndexOf('.')) 
   console.log(fileName);
+
   var link = Document.getElementById(fileName);
   link.classList.add("current-page");
 
 });
 
-function fileName(url) {
-  if (url === null || typeof url === 'undefined')
-     return ''
-  let file = new URI(url).filename() // File name with file extension
-  return file.substring(0, file.lastIndexOf('.')) // Remove the extension
-}
