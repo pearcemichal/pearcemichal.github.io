@@ -118,13 +118,11 @@ footer p {
 
 .content-container {
     width: 100%;
-    padding: 10px;
-
 }
 
 .content {
     background-color: #ad9e66;
-    padding: 10px 50px;
+    padding: 10px 50px 20px;
     max-width: 900px;
     margin: auto;
     box-shadow: 5px 5px 10px rgba(0,0,0,0.3);
