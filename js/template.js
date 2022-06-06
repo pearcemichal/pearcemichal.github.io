@@ -2,10 +2,10 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
   // get current file name
   var url = window.location.pathname;
-  var filename = url.substring(url.lastIndexOf('/')+1);
+  var file = url.substring(url.lastIndexOf('/')+1);
 
   // Remove the extension
-  var link = filename.substring(0, filename.lastIndexOf('.')) 
+  var filename = file.substring(0, file.lastIndexOf('.')) 
 
   fetch("./templates/header.html")
     .then((response) => response.text())
