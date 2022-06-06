@@ -16,7 +16,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
     .then((html) => {
         document.getElementById("header").innerHTML = html;
 
-        var link = Document.getElementById(filename);
+        var link = document.getElementById("" + filename);
         link.classList.add("current-page");
     })
     .catch((error) => {
