@@ -1,15 +1,25 @@
 window.addEventListener('DOMContentLoaded', (event) => {
 
-  fetch("./templates/header.html" /*, options */)
+  // get current file name
+  var url = window.location.pathname;
+  var filename = url.substring(url.lastIndexOf('/')+1);
+
+  // Remove the extension
+  var link = filename.substring(0, filename.lastIndexOf('.')) 
+
+  fetch("./templates/header.html")
     .then((response) => response.text())
     .then((html) => {
         document.getElementById("header").innerHTML = html;
+
+        var link = Document.getElementById(fileName);
+        link.classList.add("current-page");
     })
     .catch((error) => {
         console.warn(error);
   });
 
-  fetch("./templates/footer.html" /*, options */)
+  fetch("./templates/footer.html")
     .then((response) => response.text())
     .then((html) => {
         document.getElementById("footer").innerHTML = html;
@@ -17,17 +27,6 @@ window.addEventListener('DOMContentLoaded', (event) => {
     .catch((error) => {
         console.warn(error);
   });
-
-  // get current file name
-  var url = window.location.pathname;
-  var filename = url.substring(url.lastIndexOf('/')+1);
-
-  // Remove the extension
-  filename = file.substring(0, file.lastIndexOf('.')) 
-  console.log(fileName);
-
-  var link = Document.getElementById(fileName);
-  link.classList.add("current-page");
 
 });
 
