@@ -222,10 +222,14 @@ transform-origin: 0 0;
     color: #47260c;
 }
 
-.footer {
+footer {
     background: black;
     color: white;
     text-align: center;
+
+    margin-top: 50px;
+
+    padding: 20px;
 }
 
 @media only screen and (max-width: 1000px) {
