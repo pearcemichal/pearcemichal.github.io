@@ -65,8 +65,7 @@
               //List all .png file names in the page
               $(data).find("a:contains(" + (extension[0]) + "), a:contains(" + (extension[1]) + ")").each(function () { 
                   var filename = this.href.replace(window.location.host, "").replace("http://", "");
-
-                  //$("body").append("<img src='" + dir + filename + "'>");
+                  
                   $("#debris-field-gallery").append("<div class='gallery-item'><img class='gallery-image' src='" + filename + "' alt='Debris Field 13'></div>");
               });
 
@@ -89,8 +88,6 @@
               //List all .png file names in the page
               $(data).find("a:contains(" + (extension[0]) + "), a:contains(" + (extension[1]) + ")").each(function () { 
                   var filename = this.href.replace(window.location.host, "").replace("http://", "");
-
-                  console.log(filename);
                   
                   $("#undine-gallery").append("<div class='gallery-item'><img class='gallery-image' src='" + filename + "' alt='Debris Field 13'></div>");
               });
