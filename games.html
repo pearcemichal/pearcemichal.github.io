@@ -50,7 +50,41 @@
                 <h1>Gallery (v3.0 Beta)</h1>
                 <hr>
                 <!-- gallery -->
-                <div id="debris-field-gallery" class=""></div>
+                <div id="debris-field-gallery" class="">
+
+                    <div class='gallery-item'><img class='gallery-image' src='/images/games/debris-field/gallery/20220606144937_1.jpg' alt='Debris Field 1'></div>
+                    <div class='gallery-item'><img class='gallery-image' src='/images/games/debris-field/gallery/20220606145051_1.jpg' alt='Debris Field 2'></div>
+
+                    <div class='gallery-item'><img class='gallery-image' src='/images/games/debris-field/gallery/20220606145222_1.jpg' alt='Debris Field 4'></div>
+                    <div class='gallery-item'><img class='gallery-image' src='/images/games/debris-field/gallery/20220606145427_1.jpg' alt='Debris Field 5'></div>
+                    <div class='gallery-item'><img class='gallery-image' src='/images/games/debris-field/gallery/20220606145527_1.jpg' alt='Debris Field 6'></div>
+                    <div class='gallery-item'><img class='gallery-image' src='/images/games/debris-field/gallery/20220606145552_1.jpg' alt='Debris Field 7'></div>
+                    <div class='gallery-item'><img class='gallery-image' src='/images/games/debris-field/gallery/20220606145635_1.jpg' alt='Debris Field 8'></div>
+                    <div class='gallery-item'><img class='gallery-image' src='/images/games/debris-field/gallery/20220606145739_1.jpg' alt='Debris Field 9'></div>
+              
+                    <div class='gallery-item'><img class='gallery-image' src='/images/games/debris-field/gallery/20220606145834_1.jpg' alt='Debris Field 11'></div>
+                    <div class='gallery-item'><img class='gallery-image' src='/images/games/debris-field/gallery/20220606150015_1.jpg' alt='Debris Field 12'></div>
+                    <div class='gallery-item'><img class='gallery-image' src='/images/games/debris-field/gallery/20220606150035_1.jpg' alt='Debris Field 13'></div>
+
+                    <div class='gallery-item'><img class='gallery-image' src='/images/games/debris-field/gallery/20220606150136_1.jpg' alt='Debris Field 15'></div>
+                    <div class='gallery-item'><img class='gallery-image' src='/images/games/debris-field/gallery/20220606150245_1.jpg' alt='Debris Field 16'></div>
+                    <div class='gallery-item'><img class='gallery-image' src='/images/games/debris-field/gallery/20220606150305_1.jpg' alt='Debris Field 17'></div>
+                    <div class='gallery-item'><img class='gallery-image' src='/images/games/debris-field/gallery/20220606150405_1.jpg' alt='Debris Field 18'></div>
+                    <div class='gallery-item'><img class='gallery-image' src='/images/games/debris-field/gallery/20220606150556_1.jpg' alt='Debris Field 19'></div>
+                    <div class='gallery-item'><img class='gallery-image' src='/images/games/debris-field/gallery/20220606150730_1.jpg' alt='Debris Field 10'></div>
+                    <div class='gallery-item'><img class='gallery-image' src='/images/games/debris-field/gallery/20220606150734_1.jpg' alt='Debris Field 20'></div>
+                    <div class='gallery-item'><img class='gallery-image' src='/images/games/debris-field/gallery/20220606150743_1.jpg' alt='Debris Field 21'></div>
+                    <div class='gallery-item'><img class='gallery-image' src='/images/games/debris-field/gallery/20220606150856_1.jpg' alt='Debris Field 22'></div>
+                    <div class='gallery-item'><img class='gallery-image' src='/images/games/debris-field/gallery/20220606150901_1.jpg' alt='Debris Field 23'></div>
+                    <div class='gallery-item'><img class='gallery-image' src='/images/games/debris-field/gallery/20220606150927_1.jpg' alt='Debris Field 24'></div>
+                    <div class='gallery-item'><img class='gallery-image' src='/images/games/debris-field/gallery/20220606151339_1.jpg' alt='Debris Field 25'></div>
+                    <div class='gallery-item'><img class='gallery-image' src='/images/games/debris-field/gallery/20220606151413_1.jpg' alt='Debris Field 26'></div>
+                    <div class='gallery-item'><img class='gallery-image' src='/images/games/debris-field/gallery/20220606151439_1.jpg' alt='Debris Field 27'></div>
+                    <div class='gallery-item'><img class='gallery-image' src='/images/games/debris-field/gallery/20220606151530_1.jpg' alt='Debris Field 28'></div>
+                    <div class='gallery-item'><img class='gallery-image' src='/images/games/debris-field/gallery/20220606151530_1.jpg' alt='Debris Field 29'></div>
+                    <div class='gallery-item'><img class='gallery-image' src='/images/games/debris-field/gallery/20220606151638_1.jpg' alt='Debris Field 30'></div>
+                    <div class='gallery-item'><img class='gallery-image' src='/images/games/debris-field/gallery/20220606151653_1.jpg' alt='Debris Field 31'></div>
+                </div>
             </div>
 
             <div class="content">
@@ -88,6 +122,16 @@
     <script>
         $(document).ready(function () {
 
+            $('#debris-field-gallery').slick({
+                dots: true,
+                infinite: true,
+                speed: 300,
+                slidesToShow: 1
+            });
+
+
+
+            /*
             var dir = "/images/games/debris-field/gallery";
             var extension = [".png", ".jpg"];
 
@@ -100,8 +144,8 @@
                     $(data).find("a:contains(" + (extension[0]) + "), a:contains(" + (extension[1]) + ")").each(function () {
                         var filename = this.href.replace(window.location.host, "").replace("http://", "");
 
-                        //$("body").append("<img src='" + dir + filename + "'>");
-                        $("#debris-field-gallery").append("<div class='gallery-item'><img class='gallery-image' src='" + filename + "' alt='Debris Field 13'></div>");
+                        //$("body").append("<img src='/images/games/debris-field/gallery/" + dir + filename + "'>");
+                        $("#debris-field-gallery").append("<div class='gallery-item'><img class='gallery-image' src='/images/games/debris-field/gallery/" + filename + "' alt='Debris Field 13'></div>");
                     });
 
                     $('#debris-field-gallery').slick({
@@ -113,6 +157,7 @@
 
                 }
             });
+            */
         });
 
     </script>

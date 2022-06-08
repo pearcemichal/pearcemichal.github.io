@@ -25,7 +25,12 @@
       <h1>Debris Field Art</h1>
       <hr>
       <!-- gallery -->
-      <div id="debris-field-gallery" class=""></div>
+      <div id="debris-field-gallery" class="">
+        <div class='gallery-item'><img class='gallery-image' src='/images/gallery/debris-field-art/BwZtlKG.png' alt='Debris Field 1'></div>
+        <div class='gallery-item'><img class='gallery-image' src='/images/gallery/debris-field-art/fg6IZ4A.png' alt='Debris Field 2'></div>
+        <div class='gallery-item'><img class='gallery-image' src='/images/gallery/debris-field-art/orbhXmU.png' alt='Debris Field 3'></div>
+        <div class='gallery-item'><img class='gallery-image' src='/images/gallery/debris-field-art/uAs3uKL.png' alt='Debris Field 4'></div>
+      </div>
 
     </div>
 
@@ -35,7 +40,18 @@
       <h1>Undine (Unreleased)</h1>
       <hr>
       <!-- gallery -->
-      <div id="undine-gallery" class=""></div>
+      <div id="undine-gallery" class="">
+        <div class='gallery-item'><img class='gallery-image' src='/images/gallery/undine/ukijima.png' alt='Undine 1'></div>
+        <div class='gallery-item'><img class='gallery-image' src='/images/gallery/undine/undine_01.png' alt='Undine 2'></div>
+        <div class='gallery-item'><img class='gallery-image' src='/images/gallery/undine/undine_02.png' alt='Undine 3'></div>
+        <div class='gallery-item'><img class='gallery-image' src='/images/gallery/undine/undine_03.png' alt='Undine 4'></div>
+        <div class='gallery-item'><img class='gallery-image' src='/images/gallery/undine/undine_04.png' alt='Undine 5'></div>
+        <div class='gallery-item'><img class='gallery-image' src='/images/gallery/undine/venice_inception.png' alt='Undine 6'></div>
+        <div class='gallery-item'><img class='gallery-image' src='/images/gallery/undine/venice_island.png' alt='Undine 7'></div>
+        <div class='gallery-item'><img class='gallery-image' src='/images/gallery/undine/venice_test_01.png' alt='Undine 8'></div>
+        <div class='gallery-item'><img class='gallery-image' src='/images/gallery/undine/venice_test_02.png' alt='Undine 9'></div>
+        <div class='gallery-item'><img class='gallery-image' src='/images/gallery/undine/venice_test_05.png' alt='Undine 10'></div>
+      </div>
 
     </div>
 
@@ -54,6 +70,20 @@
 <script>
     $(document).ready(function(){
 
+      $('#debris-field-gallery').slick({  dots: true,
+        infinite: true,
+        speed: 300,
+        slidesToShow: 1
+      });
+
+      $('#undine-gallery').slick({  dots: true,
+        infinite: true,
+        speed: 300,
+        slidesToShow: 1
+      });
+
+
+      /*
       var extension = [".png", ".jpg"];
       
       var dir = "/images/gallery/debris-field-art";
@@ -78,32 +108,6 @@
           }
       });
 
-
-      fetch("/images/gallery/debris-field-art")
-        .then((response) => response.text())
-          .then((html) => {
-
-              //List all .png file names in the page
-              $(html).find("a:contains(" + (extension[0]) + "), a:contains(" + (extension[1]) + ")").each(function () { 
-                  var filename = this.href.replace(window.location.host, "").replace("http://", "");
-
-                  $("#debris-field-gallery").append("<div class='gallery-item'><img class='gallery-image' src='" + filename + "' alt='Debris Field 13'></div>");
-              });
-
-              $('#debris-field-gallery').slick({  dots: true,
-                infinite: true,
-                speed: 300,
-                slidesToShow: 1
-              });
-
-
-
-        })
-        .catch((error) => {
-            console.warn(error);
-      });
-
-
       var dir = "/images/gallery/undine";
       $.ajax({
           //This will retrieve the contents of the folder if the folder is configured as 'browsable'
@@ -125,6 +129,7 @@
       
           }
       });
+      */
 
 
     });
