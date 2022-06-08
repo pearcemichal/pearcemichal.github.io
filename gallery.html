@@ -22,15 +22,24 @@
 
     <div class="content">
 
-      <h1>Debris Field (v3.0 Beta)</h1>
+      <h1>Debris Field Art</h1>
       <hr>
       <!-- gallery -->
-          <div id="debris-field-gallery" class="">
+      <div id="debris-field-gallery" class=""></div>
 
-          </div>
-
-      <!-- end content -->
     </div>
+
+
+    <div class="content">
+
+      <h1>Undine (Unreleased)</h1>
+      <hr>
+      <!-- gallery -->
+      <div id="undine-gallery" class=""></div>
+
+    </div>
+
+
   </div>
 </div>
 <!-- end content container -->
@@ -45,9 +54,9 @@
 <script>
     $(document).ready(function(){
 
-      var dir = "/images/gallery/debris-field/gameplay";
       var extension = [".png", ".jpg"];
-
+      
+      var dir = "/images/gallery/debris-field-art";
       $.ajax({
           //This will retrieve the contents of the folder if the folder is configured as 'browsable'
           url: dir,
@@ -69,6 +78,33 @@
       
           }
       });
+
+
+      var dir = "/images/gallery/undine";
+      $.ajax({
+          //This will retrieve the contents of the folder if the folder is configured as 'browsable'
+          url: dir,
+          success: function (data) {
+
+              //List all .png file names in the page
+              $(data).find("a:contains(" + (extension[0]) + "), a:contains(" + (extension[1]) + ")").each(function () { 
+                  var filename = this.href.replace(window.location.host, "").replace("http://", "");
+
+                  console.log(filename);
+                  
+                  $("#undine-gallery").append("<div class='gallery-item'><img class='gallery-image' src='" + filename + "' alt='Debris Field 13'></div>");
+              });
+
+              $('#undine-gallery').slick({  dots: true,
+                infinite: true,
+                speed: 300,
+                slidesToShow: 1
+              });
+      
+          }
+      });
+
+
     });
 
 </script>
