@@ -17,6 +17,10 @@ a {
     text-decoration: none;
 }
 
+.post a {
+    color: #a55a15;
+}
+
 .nav-info a {
     font-size: 16pt;
     margin-right: 25px;
@@ -24,6 +28,10 @@ a {
 
 a:hover {
     color: #a55915;
+}
+
+.post a:hover {
+    color: #68380c;
 }
 
 h1 {
@@ -37,7 +45,7 @@ h2 {
 
 hr {
     border-style: solid;
-    color: #453923;
+    color: #241303;
 
 }
 
@@ -125,7 +133,47 @@ footer p {
     padding: 10px 50px 20px;
     max-width: 900px;
     margin: auto;
-    box-shadow: 5px 5px 10px rgba(0,0,0,0.3);
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.7);
+    margin-bottom: 20px;
+}
+
+.post {
+    padding:20px;
+    background: #e8d79b;
+    margin-bottom: 15px;
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.5);
+}
+
+.home-banner img {
+    width: 100%;
+}
+
+.game-header-banner {
+    position: absolute;
+    top:0px;
+    width: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.game-header-banner img {
+    width: 100%;
+    min-width: 1500px;
+}
+
+.game-header-logo {
+    margin-top: 120px;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.game-header-logo img {
+    width: 100%;
+    max-width: 600px;
+}
+
+.game-content {
+    margin-top: 50px;
 }
 
 .profile-image {
@@ -165,6 +213,10 @@ footer p {
     display: none;
 }
 
+.link-icon {
+    width: 14px;
+}
+
 .gallery {
     margin-bottom: 60px;
 }
@@ -174,8 +226,8 @@ footer p {
 }
 
 .gallery-image {
-    height: 100%;
-    width: auto;
+    height: auto;
+    width: 100%;
     margin: auto;
 }
 
@@ -192,6 +244,7 @@ footer p {
     text-shadow: 2px 2px 2px #2f2617, -2px -2px 2px #2f2617;
 
 }
+
 
 .slick-slide {
     background-color: black;
@@ -309,9 +362,9 @@ footer {
         display: inline-block;
         padding-left: 20px;
     }
-
-    .content-container {
-        padding: 20px 20px;
+    
+    .profile-image {
+        height: 100px;
     }
 
     footer {
@@ -346,13 +399,6 @@ footer {
         display: none;
     }
 
-    .content-container {
-        padding: 10px 10px;
-    }
-
-    .profile-image {
-        height: 100px;
-    }
 }
 
 @media only screen and (max-width: 330px) {

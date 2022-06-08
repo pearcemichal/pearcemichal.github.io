@@ -4,11 +4,11 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   <title>Gallery</title>
 
-  <link href="css/style.css" rel="stylesheet" type="text/css" />
-  <script src="js/template.js"></script>
-
   <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
   <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+
+  <link href="css/style.css" rel="stylesheet" type="text/css" />
+  <script src="js/template.js"></script>
 
 </head>
 
@@ -22,65 +22,11 @@
 
     <div class="content">
 
-      <h1>Debris Field</h1>
+      <h1>Debris Field (v3.0 Beta)</h1>
       <hr>
       <!-- gallery -->
-          <div id="debris-field-gallery" class="gallery">
+          <div id="debris-field-gallery" class="">
 
-              <div class="gallery-item">
-                <img class="gallery-image" src="https://i.imgur.com/RiFBC6f.png" alt="Debris Field 1">
-                <div class="gallery-description"><p>Explore a randomly generated space arena<p></div>
-              </div>
-
-              <div class="gallery-item">
-                <img class="gallery-image" src="https://i.imgur.com/KK1PQGF.png" alt="Debris Field 2">
-              </div>
-
-              <div class="gallery-item">
-                <img class="gallery-image" src="https://i.imgur.com/ypMdksS.png" alt="Debris Field 3">
-              </div>
-
-              <div class="gallery-item">
-                <img class="gallery-image" src="https://i.imgur.com/orbhXmU.png" alt="Debris Field 4">
-              </div>
-
-              <div class="gallery-item">
-                <img class="gallery-image" src="https://i.imgur.com/YO2xIMr.png" alt="Debris Field 5">
-                <div class="gallery-description"><p>Travel through several unique levels with their own secrets to discover<p></div>
-              </div>
-
-              <div class="gallery-item">
-                <img class="gallery-image" src="https://i.imgur.com/frQW4ZK.png" alt="Debris Field 6">
-              </div>
-
-              <div class="gallery-item">
-                <img class="gallery-image" src="https://i.imgur.com/et33jya.png" alt="Debris Field 7">
-              </div>
-
-              <div class="gallery-item">
-                <img class="gallery-image" src="https://i.imgur.com/fg6IZ4A.png" alt="Debris Field 8">
-              </div>
-
-              <div class="gallery-item">
-                <img class="gallery-image" src="https://i.imgur.com/Y85CXsT.png" alt="Debris Field 9">
-              </div>
-
-              <div class="gallery-item">
-                <img class="gallery-image" src="https://i.imgur.com/zt94Vdl.png" alt="Debris Field 10">
-              </div>
-
-              <div class="gallery-item">
-                <img class="gallery-image" src="https://i.imgur.com/uAs3uKL.png" alt="Debris Field 11">
-              </div>
-
-              <div class="gallery-item">
-                <img class="gallery-image" src="https://i.imgur.com/WMIEddZ.png" alt="Debris Field 12">
-                <div class="gallery-description"><p>Overcome against all odds<p></div>
-              </div>
-
-              <div class="gallery-item">
-                <img class="gallery-image" src="https://i.imgur.com/V969g9e.png" alt="Debris Field 13">            
-              </div>
           </div>
 
       <!-- end content -->
@@ -99,11 +45,31 @@
 <script>
     $(document).ready(function(){
 
-        $('.gallery').slick({  dots: true,
-          infinite: true,
-          speed: 300,
-          slidesToShow: 1});
-        });
+      var dir = "/images/gallery/debris-field/gameplay";
+      var extension = [".png", ".jpg"];
+
+      $.ajax({
+          //This will retrieve the contents of the folder if the folder is configured as 'browsable'
+          url: dir,
+          success: function (data) {
+
+              //List all .png file names in the page
+              $(data).find("a:contains(" + (extension[0]) + "), a:contains(" + (extension[1]) + ")").each(function () { 
+                  var filename = this.href.replace(window.location.host, "").replace("http://", "");
+
+                  //$("body").append("<img src='" + dir + filename + "'>");
+                  $("#debris-field-gallery").append("<div class='gallery-item'><img class='gallery-image' src='" + filename + "' alt='Debris Field 13'></div>");
+              });
+
+              $('#debris-field-gallery').slick({  dots: true,
+                infinite: true,
+                speed: 300,
+                slidesToShow: 1
+              });
+      
+          }
+      });
+    });
 
 </script>
 
