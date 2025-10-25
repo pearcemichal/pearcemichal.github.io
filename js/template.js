@@ -7,7 +7,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
   // Remove the extension
   var filename = file.substring(0, file.lastIndexOf('.')); 
 
-  fetch("./templates/header.html")
+  fetch("/templates/header.html")
     .then((response) => response.text())
     .then((html) => {
         document.getElementById("header").innerHTML = html;
@@ -19,7 +19,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
         console.warn(error);
   });
 
-  fetch("./templates/footer.html")
+  fetch("/templates/footer.html")
     .then((response) => response.text())
     .then((html) => {
         document.getElementById("footer").innerHTML = html;
